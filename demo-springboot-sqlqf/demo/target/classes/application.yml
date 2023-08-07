@@ -1,0 +1,21 @@
+
+#服务器配置
+server:
+  port: 8080
+
+#数据源配置
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/pro-db?serverTimezon=UTC
+    username: root
+    password:
+    type: com.alibaba.druid.pool.DruidDataSource
+    main:
+      allow-circular-references: true
+
+
+#配置mybatis映射文件位置
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
+
